@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridge Care</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f2f6f9;
+      color: #333;
+    }
+    header {
+      background-color: #004466;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0077aa;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffeecc;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+    }
+    footer {
+      background-color: #004466;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(pageId).style.display = 'block';
+    }
+    window.onload = () => showPage('home');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Bridge Care: Healthcare That Moves With You</h1>
+  </header>
+  <nav>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('services')">Services</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('faq')">FAQ</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Bridge Care</h2>
+    <p>Bridge Care is a mobile health service aimed at connecting rural and underserved communities with consistent, affordable, and compassionate healthcare — both physical and mental. We believe no one should be left behind when it comes to getting care.</p>
+  </section>
+
+  <section id="services" style="display: none;">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Mobile Physical Health Check-ups</li>
+      <li>Mental Health Counseling and Support</li>
+      <li>Telehealth Appointments with Specialists</li>
+      <li>Preventative Screenings</li>
+      <li>Prescription Delivery in Partnership with Local Clinics</li>
+      <li>Extended After-Work Hours Services</li>
+    </ul>
+  </section>
+
+  <section id="about" style="display: none;">
+    <h2>About Bridge Care</h2>
+    <p>Bridge Care was created to fix the growing gap in healthcare access for rural and low-income Americans. We’re inspired by existing groups like Remote Area Medical, but we go further by offering long-term mobile clinics that consistently return to the same communities.</p>
+    <p>Our model centers around trust, cultural understanding, and building real relationships with the people we serve.</p>
+  </section>
+
+  <section id="faq" style="display: none;">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How do I book an appointment?</strong><br>Appointments are available on-site or can be scheduled through our mobile app and hotline.</p>
+    <p><strong>Do you offer mental health services?</strong><br>Yes. Bridge Care combines mental and physical healthcare in one mobile unit to make it easier for patients to get complete care.</p>
+    <p><strong>Where do you operate?</strong><br>We serve rural and medically underserved counties across the United States and return regularly to the same locations.</p>
+  </section>
+
+  <section id="contact" style="display: none;">
+    <h2>Contact Us</h2>
+    <p>Email: info@bridgecare.org</p>
+    <p>Phone: 1-800-555-BRIDGE</p>
+    <p>Follow us on social media @BridgeCareHealth</p>
+    <p>Want to donate or volunteer? Reach out through our partner page for more info.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bridge Care. All rights reserved.</p>
+  </footer>
+</body>
+</html>
